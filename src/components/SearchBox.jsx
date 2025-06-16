@@ -1,18 +1,20 @@
-
+import { Search } from 'lucide-react';
 // const person = {
 //   name:"Bruce Wayne",
 //   age : 19,
 //   location:'Lucknow'
 
+
 // }
 // const {name,age,location} = person;
 
-function Search({searchTerm , setSearchTerm}) {
+function SearchBox({searchTerm , setSearchTerm}) {
   
   return (
     <div className="search">
       <div>
-        <img src="search.png" alt="search"/>
+        {/* <img src="/search.svg" alt="search"/> */}
+        <Search className="absolute left-2 h-5 w-5 text-gray-200" />
         <input type="text"
         placeholder="Search through thousand of movies"
         value={searchTerm}
@@ -23,4 +25,4 @@ function Search({searchTerm , setSearchTerm}) {
     </div>
   )
 }
-export default Search
+export default SearchBox

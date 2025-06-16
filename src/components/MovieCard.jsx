@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 const MovieCard = ({ movie: { title, vote_average, poster_path, release_date,
   original_language
 } }) => {
@@ -11,11 +12,12 @@ const MovieCard = ({ movie: { title, vote_average, poster_path, release_date,
 
         <div className="content">
           <div className="rating">
-            <img src="star.png" alt="Star Icon" />
+            {/* <img src="star.svg" alt="star Icon"/> */}
+            <Star className="h-4 w-4 text-yellow-400" /> 
             <p>{vote_average ? vote_average.toFixed(1):'N/A'}</p>
             
           </div>
-
+          
           <span>•</span> 
           <p className="lang">{original_language}</p> 
           <p className="year">
